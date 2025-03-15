@@ -1,0 +1,23 @@
+{
+    "name": "JPC",
+    // "image": "omnipotence:noetic",
+    "build": {
+        "dockerfile": "Dockerfile", // Path to your Dockerfilez
+        "options": [
+            "-t=omnipotence_dc:noetic"
+        ]
+    },
+    "workspaceFolder": "/home/dev",
+    "remoteUser": "dev",
+    "mounts": [
+        "source=${localWorkspaceFolder}/config,target=/home/dev/config,type=bind,consistency=cached"
+    ],
+    "runArgs": [
+        "--env=DISPLAY=${localEnv:DISPLAY}",
+        "--volume", "/dev/dri:/dev/dri",
+        "--network=host",
+        "--hostname", "container",
+        "--name", "jetpack_r32.7.1",
+        "--rm"
+    ]
+}
