@@ -6,6 +6,8 @@ FROM nvcr.io/nvidia/l4t-base:r32.7.1
 SHELL ["/bin/bash", "-c"]
 
 RUN apt-get update && apt-get install -y \
+    apt-utils \
+    sudo \
     git \
     nano
 
