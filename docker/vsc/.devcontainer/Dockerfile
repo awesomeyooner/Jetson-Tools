@@ -1,5 +1,6 @@
-FROM nvcr.io/nvidia/l4t-base:r32.7.1
-
+# FROM nvcr.io/nvidia/l4t-base:r32.7.1
+FROM dustynv/ros:humble-desktop-l4t-r32.7.1
+# dustynv/ros:humble-desktop-l4t-r32.7.1
 # nvcr.io/nvidia/l4t-base:r32.7.1 is jetson nano image
 # nvidia/cuda:12.2.2-base-ubuntu22.04 is x86-compatible CUDA image
 
