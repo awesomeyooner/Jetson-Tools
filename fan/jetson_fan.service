@@ -1,0 +1,8 @@
+[Unit]
+Description=Startup script to turn on the PWM fan
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/dev/Jetson-Tools/fan/enable.sh
+ExecStop=/home/dev/Jetson-Tools/fan/disable.sh
