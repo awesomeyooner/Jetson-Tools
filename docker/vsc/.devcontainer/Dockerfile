@@ -26,3 +26,5 @@ USER dev
 
 # Go to home directory of user
 WORKDIR /home/dev
+
+RUN echo 'source /opt/ros/humble/install/setup.bash' >> ~/.bashrc
