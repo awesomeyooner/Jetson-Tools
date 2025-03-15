@@ -4,7 +4,7 @@
     "build": {
         "dockerfile": "Dockerfile", // Path to your Dockerfilez
         "options": [
-            "-t=omnipotence_dc:noetic"
+            "-t=jetpack_devcontainer:r32.7.1"
         ]
     },
     "workspaceFolder": "/home/dev",
