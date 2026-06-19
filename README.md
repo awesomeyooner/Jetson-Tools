@@ -8,8 +8,9 @@ The main feature is to create a `.service` file to automatically apply overclock
 The name of the service is `jetson_fan`
 
 ```bash
-$ sudo chmod +x /path/to/Jetson-Tools/fan/setup.sh
-$ sudo ./path/to/Jetson-Tools/fan/setup.sh
+$ git clone https://github.com/awesomeyooner/Jetson-Tools.git
+$ sudo chmod +x Jetson-Tools/fan/setup.sh
+$ sudo ./Jetson-Tools/fan/setup.sh
 ```
 
 `setup.sh` is the all-in-one script that creates the `.service` file and enables the service
