@@ -10,6 +10,6 @@ sudo chmod +x disable.sh
 echo "Done!"
 
 # Create and load the actual service file
-sudo .$SCRIPT_DIR/create_service.sh
+sudo ./$SCRIPT_DIR/create_service.sh
 
 echo "All complete!"
