@@ -36,3 +36,13 @@ cp ${SCRIPT_DIR}/${SERVICE_NAME} ${SYSTEMD_DIR}/${SERVICE_NAME}
 
 echo "Done!"
 
+echo "Reloading Systemd-Daemon..."
+sudo systemctl daemon-reload
+echo "Done!"
+
+echo "Enabling service..."
+sudo systemctl enable jetson_fan.service
+sudo systemctl start jetson_fan.service
+sudo systemctl status jetson_fan.service
+echo "Done!"
+
