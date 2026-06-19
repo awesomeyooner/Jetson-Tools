@@ -19,9 +19,10 @@ cat << EOF > $SCRIPT_DIR/$SERVICE_NAME
 Description=Startup script to turn on the PWM fan
 
 [Service]
-Type=simple
+Type=oneshot
 ExecStart=$SCRIPT_DIR/enable.sh
 ExecStop=$SCRIPT_DIR/disable.sh
+RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
