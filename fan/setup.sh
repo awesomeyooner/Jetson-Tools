@@ -1,15 +1,15 @@
 #!/bin/bash
 
-echo 'Adding .service file...'
-cp ./jetson_fan.service /etc/systemd/system/jetson_fan.service
+SCRIPT_PATH="$(realpath "$0")"
+SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
 
-echo 'Allowing executables...'
+echo "Allowing executables..."
+sudo chmod +x create_service.sh
 sudo chmod +x enable.sh
 sudo chmod +x disable.sh
+echo "Done!"
 
-echo 'Enabling and starting service...'
-sudo systemctl enable jetson_fan.service
-sudo systemctl start jetson_fan.service
-sudo systemctl status jetson_fan.service
+# Create and load the actual service file
+sudo .$SCRIPT_DIR/create_service.sh
 
-echo 'Finished!'
+echo "All complete!"
