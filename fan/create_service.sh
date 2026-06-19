@@ -44,6 +44,6 @@ echo "Done!"
 echo "Enabling service..."
 sudo systemctl enable jetson_fan.service
 sudo systemctl start jetson_fan.service
-sudo systemctl status jetson_fan.service
+sudo systemctl status jetson_fan.service --no-pager # No pager so the script fully exits
 echo "Done!"
 
